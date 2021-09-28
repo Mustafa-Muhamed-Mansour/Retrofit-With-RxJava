@@ -45,7 +45,7 @@ public class PostFragment extends Fragment
 
         postViewModel = new ViewModelProvider(requireActivity()).get(PostViewModel.class);
 
-        postViewModel.getPosts();
+        
     }
 
     @Override
@@ -61,6 +61,7 @@ public class PostFragment extends Fragment
                 postAdapter = new PostAdapter(postModels);
                 binding.rVPost.setAdapter(postAdapter);
                 binding.rVPost.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
+                binding.rVPost.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
             }
         });
     }

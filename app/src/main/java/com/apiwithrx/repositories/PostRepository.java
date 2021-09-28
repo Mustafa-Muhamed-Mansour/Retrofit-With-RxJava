@@ -20,7 +20,7 @@ public class PostRepository
 {
     private PostService postService;
     private MutableLiveData<String> stringMutableLiveData = new MutableLiveData<>();
-    private MutableLiveData<ArrayList<PostModel>> postModelMutableLiveData = new MutableLiveData<>();
+    public MutableLiveData<ArrayList<PostModel>> postModelMutableLiveData = new MutableLiveData<>();
 
     public PostRepository()
     {
